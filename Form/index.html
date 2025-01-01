@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    
+   
+        <legend>ha</legend>
+        <form action="form.php" method="POST">
+            <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <textarea name="" id="" cols="30"></textarea>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+
+            <label for="gender">gender</label>
+
+            <input type="radio" title="hi babe" name="gender" id="male" value="male" required>
+
+            <!-- readonly -->
+            <input type="text" name="" id=""  value="Gagde" readonly placeholder="hi babe">
+
+            <!-- phone np -->
+            <input type="tel" name="phone" id="phone"  placeholder="98**********" required>
+
+            <input type="radio" name="male" id="" value="hi babe" >
+
+            <input type="radio" name="female" id="" value="hi don" required>
+
+            <!-- selcetion course -->
+            <select name="course" id="course">
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+                <option value="bcom">BCom</option>
+            </select>
+
+            <!-- selecting only on radio button at atime -->
+
+            
+
+
+            <button type="submit">Submit</button>
+            <!-- reset -->
+            <button type="reset">Reset</button>
+
+        </fieldset> 
+        </form>
+    
+</body>
+</html>
