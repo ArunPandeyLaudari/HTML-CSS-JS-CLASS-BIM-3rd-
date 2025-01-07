@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Pandey Laudari</title>
+    <link rel="shortcut icon" href="/arun.png" type="image/x-icon">
+    
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 4px;
+            margin: 2px;
+            border-radius: 10px;
+            list-style-type: none;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+
+        /* herosection css start here */
+        .navbar {
+            height: 80px;
+            width: 100%;
+            background-color: blueviolet;
+            position: sticky;
+
+
+        }
+
+        .navbar .logo img {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            cursor: pointer;
+
+        }
+
+        .navbar .navlist {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+            font-size: x-large;
+            font-weight: 400px;
+
+
+        }
+
+        .navlist li {
+            cursor: pointer;
+        }
+
+
+        .navbar li:hover {
+            border-bottom: 2px solid wheat;
+        }
+
+        .main {
+            height: 100%;
+            width: 100%;
+        }
+
+        .main .herobanner {
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .herobanner .content {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .herobanner .content h1 {
+            font-size: 50px;
+            color: blueviolet;
+        }
+
+        .herobanner .content h3 {
+            font-size: 20px;
+            color: rgb(66, 61, 61);
+        }
+
+        .herobanner .content p {
+            font-size: 15px;
+            color: gray;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        .directaction {
+            display: flex;
+            gap: 15px;
+        }
+
+       
+        .directaction a {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 25px;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .directaction button {
+    background-color: #5a189a;
+            color: #fff;
+            border-radius: 25px;
+            border: none;
+        transition: all 0.3s ease;
+
+        }
+
+        .directaction button a{
+            color: #fff;
+        }
+
+        
+
+        .directaction a {
+            color: #5a189a;
+            border: 2px solid #5a189a;
+        }
+
+        .directaction a:hover {
+            background-color: #5a189a;
+            color: #fff;
+        }
+
+        .herobanner .fontimg {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fontimg img {
+            height: 400px;
+            width: 400px;
+            border-radius: 100%;
+            box-shadow: 4px 15px 10px 4px rgb(80, 49, 109);
+        }
+
+        /* herosection css end */
+
+        /* about us css start */
+
+     .aboutme{
+        margin-top: 20px;
+        height:500px;
+        width: 100%;
+     }
+
+     .aboutme h2{
+        font-size: 30px;
+        font-weight: 600;
+        border-bottom: 3px solid grey;
+        color: blueviolet;
+        text-align: center;
+     }
+
+        /* about us css end */
+
+        /* footer css start here */
+        /* Footer Section */
+        footer {
+            background-color: #5a189a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #ffcf99;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+        /* footer section css ends here */
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar begin -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src='/arun.png' alt="Logo" srcset="">
+        </div>
+        <ul class="navlist">
+            <li>Home</li>
+            <li>About</li>
+            <li>Education</li>
+            <li>Skill</li>
+            <li>Project</li>
+            <li>Contact</li>
+        </ul>
+
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- main start -->
+
+    <div class="main">
+
+        <!-- hero section start form here -->
+        <div class="herobanner">
+            <div class="content">
+                <div>
+                    <h1>Arun Pandey Laudari</h1>
+                    <h3>Fullstack Web Devloper & ML/AI Engineer....</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi officiis expedita incidunt sunt
+                        suscipit amet autem praesentium debitis quam harum! Accusamus voluptatum voluptatem dolorem
+                        tempora soluta optio alias ducimus repellat?</p>
+                </div>
+                <div class="directaction">
+                   
+                    <button>
+                    <a href="#" download="arn.pdf">Download CV</a>
+                      </button>
+                   
+                    <a href="#">Hire
+                        Me</a>
+                </div>
+            </div>
+
+            <div class="fontimg">
+                <img src='/arun.png' alt="Arun Pandey Laudari png">
+            </div>
+        </div>
+        <!-- hero section end here -->
+
+        <!-- about me section start form here -->
+        <div class="aboutme">
+            <h2>About me</h2>
+
+        </div>
+        <!-- about me section end here -->
+    </div>
+
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer>
+        All the copyright @ is reserved by Arun pandey laudari &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Devloped by :
+        <a href="#" style="text-decoration: none;color: #fff;font-weight: bolder;">Arun Pandey
+            Laudari</a>
+    </footer>
+    <!-- footer end -->
+
+</body>
+
+</html>
