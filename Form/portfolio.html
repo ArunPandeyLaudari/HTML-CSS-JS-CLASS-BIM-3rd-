@@ -2,277 +2,646 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun Pandey Laudari</title>
-    <link rel="shortcut icon" href="/arun.png" type="image/x-icon">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Arun Pandey Laudari</title>
+  <link rel="shortcut icon" href="/arun.png" type="image/x-icon">
+  <!-- boxicon -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fb;
+      color: #444;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-            padding: 4px;
-            margin: 2px;
-            border-radius: 10px;
-            list-style-type: none;
-            letter-spacing: 2px;
-            font-family: monospace;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
 
-        /* herosection css start here */
-        .navbar {
-            height: 80px;
-            width: 100%;
-            background-color: blueviolet;
-            position: sticky;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #444;
+    }
+
+    header nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #6b5ce7;
+    }
+
+    header .btn {
+      padding: 12px 25px;
+      background: linear-gradient(to right, #6b5ce7, #4a49a3);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    header .btn:hover {
+      background: linear-gradient(to right, #4a49a3, #6b5ce7);
+      transform: translateY(-3px);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #e8eaf6, #ffffff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .hero h1 span {
+      color: #6b5ce7;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn-group a {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 10px 10px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .hero .btn-primary {
+      background: linear-gradient(135deg, #6b5ce7, #5a4ac0);
+      color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero .btn-primary:hover {
+      background: linear-gradient(135deg, #5a4ac0, #6b5ce7);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero .btn-secondary {
+      background-color: #ffffff;
+      color: #6b5ce7;
+      border: 2px solid #6b5ce7;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero .btn-secondary:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .about-section img {
+      border-radius: 100%;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border: 4px solid #8e7bee;
+      box-shadow: 14px 4px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content {
+      flex: 2;
+      padding-left: 20px;
+      max-width: 600px;
+    }
+
+    .about-content h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #6b5ce7;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .about-content h1 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .about-content h1 span {
+      color: #f39c12;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .skills-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    gap: 20px;
+  
+    padding: 40px;
+    justify-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e5f2f8;
+  }
+
+  .skill-img {
+    font-size: 100px;
+    color: inherit;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  
+
+  
+
+  .skill-card {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .services-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #6b5ce7;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #6b5ce7;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #6b5ce7;
+}
+
+.testimonials {
+  display: grid;
+grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.client-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.client-details h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.client-date {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.testimonial-comment {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
 
 
-        }
 
-        .navbar .logo img {
-            height: 60px;
-            width: 60px;
-            border-radius: 100%;
-            cursor: pointer;
+    footer {
+      padding: 20px 50px;
+      text-align: center;
+      background-color: #6b5ce7;
+      color: #ffffff;
+      font-size: 14px;
+      margin-top: 50px;
+    }
 
-        }
+    footer a {
+      color: #f0f0f0;
+      text-decoration: underline;
+    }
 
-        .navbar .navlist {
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 30px;
+      }
 
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 700px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            color: #fff;
-            font-size: x-large;
-            font-weight: 400px;
+      .about-section {
+        flex-direction: column;
+        padding: 20px;
+      }
 
-
-        }
-
-        .navlist li {
-            cursor: pointer;
-        }
-
-
-        .navbar li:hover {
-            border-bottom: 2px solid wheat;
-        }
-
-        .main {
-            height: 100%;
-            width: 100%;
-        }
-
-        .main .herobanner {
-            height: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-        }
-
-        .herobanner .content {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .herobanner .content h1 {
-            font-size: 50px;
-            color: blueviolet;
-        }
-
-        .herobanner .content h3 {
-            font-size: 20px;
-            color: rgb(66, 61, 61);
-        }
-
-        .herobanner .content p {
-            font-size: 15px;
-            color: gray;
-            text-align: justify;
-            font-weight: 400;
-        }
-
-        .directaction {
-            display: flex;
-            gap: 15px;
-        }
-
-       
-        .directaction a {
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: 400;
-            border-radius: 25px;
-            border: none;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .directaction button {
-    background-color: #5a189a;
-            color: #fff;
-            border-radius: 25px;
-            border: none;
-        transition: all 0.3s ease;
-
-        }
-
-        .directaction button a{
-            color: #fff;
-        }
-
-        
-
-        .directaction a {
-            color: #5a189a;
-            border: 2px solid #5a189a;
-        }
-
-        .directaction a:hover {
-            background-color: #5a189a;
-            color: #fff;
-        }
-
-        .herobanner .fontimg {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fontimg img {
-            height: 400px;
-            width: 400px;
-            border-radius: 100%;
-            box-shadow: 4px 15px 10px 4px rgb(80, 49, 109);
-        }
-
-        /* herosection css end */
-
-        /* about us css start */
-
-     .aboutme{
-        margin-top: 20px;
-        height:500px;
-        width: 100%;
-     }
-
-     .aboutme h2{
-        font-size: 30px;
-        font-weight: 600;
-        border-bottom: 3px solid grey;
-        color: blueviolet;
+      .about-content {
+        padding-left: 0;
         text-align: center;
-     }
+      }
 
-        /* about us css end */
+      .about-section .image-container {
+        margin-bottom: 20px;
+      }
 
-        /* footer css start here */
-        /* Footer Section */
-        footer {
-            background-color: #5a189a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        footer a {
-            color: #ffcf99;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-        /* footer section css ends here */
-    </style>
+      .hero .image img {
+        width: 200px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-    <!-- navbar begin -->
-
-    <nav class="navbar">
-        <div class="logo">
-            <img src='/arun.png' alt="Logo" srcset="">
-        </div>
-        <ul class="navlist">
-            <li>Home</li>
-            <li>About</li>
-            <li>Education</li>
-            <li>Skill</li>
-            <li>Project</li>
-            <li>Contact</li>
-        </ul>
-
+  <header>
+    <div class="logo">Arun's <span style="color: #6b5ce7;">Portfolio</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Services</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Blog</a>
+      <a href="#">Projects</a>
     </nav>
+    <a href="#" class="btn">Contact Me</a>
+  </header>
 
-    <!-- navbar end -->
+  <section class="hero">
+    <div class="content">
+      <p>Welcome! Let's build something amazing together.</p>
+      <h1>
+        I'm <span>Arun Pandey Laudari</span><br>
+        <span id="dynamic-role" >Web Developer</span>
+      </h1>
+      <p>I craft digital experiences that connect users with meaningful solutions.</p>
+      <div class="btn-group">
+        <a href="#" class="btn-primary" style="text-decoration: none;">Hire Me</a>
+        <a href="#" class="btn-secondary">View Resume</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- main start -->
+  <section class="about-section">
+    <div class="image-container">
+      <img src="/arun.png" alt="About Me">
+    </div>
+    <div class="about-content">
+      <h2 style="color: #555;">About Me</h2>
+      <h1>Why You <span style="color: #6b5ce7;">Hire Me</span></h1>
+      <p>
+        I began my journey as an AI/ML enthusiast, diving into the world of artificial intelligence and machine
+        learning. Over time, I expanded my skills as a Web Developer, creating dynamic and user-centric websites. My
+        passion for technology led me to explore app development, where I worked on building innovative mobile
+        solutions. Along the way, I also honed my skills as a UI/UX Designer, focusing on crafting seamless user
+        experiences. With a continuous drive for learning and growth, I aim to bridge the gap between design,
+        development, and emerging technologies.
+      </p>
 
-    <div class="main">
+      <!-- social media icon along with link -->
+      <a href="https://www.linkedin.com/in/arun-pandey-laudari/" target="_blank"
+        style="text-decoration: none; color: #6b5ce7; font-size: 20px; margin-right: 10px;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.github.com/arunpandeylaudari" target="_blank"
+        style="text-decoration: none; color: #6b5ce7; font-size: 20px; margin-right: 10px;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.twitter.com/arunpandeylaudari" target="_blank"
+        style="text-decoration: none; color: #6b5ce7; font-size: 20px; margin-right: 10px;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/arunpandeylaudari" target="_blank"
+        style="text-decoration: none; color: #6b5ce7; font-size: 20px; margin-right: 10px;">
+        <i class="fab fa-instagram"></i>
+      </a>
 
-        <!-- hero section start form here -->
-        <div class="herobanner">
-            <div class="content">
-                <div>
-                    <h1>Arun Pandey Laudari</h1>
-                    <h3>Fullstack Web Devloper & ML/AI Engineer....</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi officiis expedita incidunt sunt
-                        suscipit amet autem praesentium debitis quam harum! Accusamus voluptatum voluptatem dolorem
-                        tempora soluta optio alias ducimus repellat?</p>
-                </div>
-                <div class="directaction">
-                   
-                    <button>
-                    <a href="#" download="arn.pdf">Download CV</a>
-                      </button>
-                   
-                    <a href="#">Hire
-                        Me</a>
-                </div>
-            </div>
 
-            <div class="fontimg">
-                <img src='/arun.png' alt="Arun Pandey Laudari png">
-            </div>
-        </div>
-        <!-- hero section end here -->
 
-        <!-- about me section start form here -->
-        <div class="aboutme">
-            <h2>About me</h2>
+    </div>
+  </section>
 
-        </div>
-        <!-- about me section end here -->
+<section>
+  <!-- heading  -->
+  </section><h2 style="text-align: center; color: #6b5ce7; margin-top: 50px;font-size: 2.5rem;">Expertise</h2>
+<div class="skills-section">
+  <div class="skill-card">
+    <i class="bx bxl-html5 skill-img" style="font-size: 100px; color: #e34c26;"></i>
+   
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-css3 skill-img" style="font-size: 100px; color: #264de4;"></i>
+   
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-javascript skill-img" style="font-size: 100px; color: #f0db4f;"></i>
+   
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-c-plus-plus skill-img" style="font-size: 100px; color: #00599c;"></i>
+   
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-python skill-img" style="font-size: 100px; color: #306998;"></i>
+   
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-react skill-img" style="font-size: 100px; color: #61dbfb;"></i>
+
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-nodejs skill-img" style="font-size: 100px; color: #68a063;"></i>
+
+  </div>
+
+  
+
+  <div class="skill-card">
+    <i class="bx bxl-firebase skill-img" style="font-size: 100px; color: #ffca28;"></i>
+
+  </div>
+
+  <div class="skill-card">
+    <i class="bx bxl-git skill-img" style="font-size: 100px; color: #f34f29;"></i>
+
+  </div>
+
+
+  <div class="skill-card">
+    <i class="bx bxl-github skill-img" style="font-size: 100px; color: #6e5494;"></i>
+
+  </div>
+</div>
+</section>
+
+<section class="services-section">
+  <h2>Services</h2>
+  <div class="services">
+
+
+    <div class="service-card">
+      <i class="bx bx-brain service-icon"></i>
+      <h3>AI/ML Development</h3>
+      <p>Build intelligent systems that learn, adapt, and evolve based on data and user interactions.</p>
     </div>
 
-    <!-- main end -->
 
-    <!-- footer start -->
+
+
+
+    <div class="service-card">
+      <i class="bx bx-code-alt service-icon"></i>
+      <h3>Web Development</h3>
+      <p>Design and develop responsive websites that are optimized for performance and user experience.</p>
+    </div>
+    <div class="service-card">
+      <i class="bx bx-mobile service-icon"></i>
+      <h3>App Development</h3>
+      <p>Create mobile applications that run seamlessly on iOS and Android devices.</p>
+    </div>
+    <div class="service-card">
+      <i class="bx bx-paint service-icon"></i>
+      <h3>UI/UX Design</h3>
+      <p>Design intuitive user interfaces and engaging user experiences for web and mobile applications.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <h2>What Clients Say</h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <div class="client-info">
+        <img src="/arun.png" alt="Client 1" class="client-photo">
+        <div class="client-details">
+          <h3>John Doe</h3>
+          <p class="client-date">January 22, 2025</p>
+        </div>
+      </div>
+      <p class="testimonial-comment">"This service was absolutely amazing! It exceeded my expectations, and the team was so professional. Highly recommend!"</p>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="client-info">
+        <img src="/srj.jpeg" alt="Client 2" class="client-photo">
+        <div class="client-details">
+          <h3>Jane Smith</h3>
+          <p class="client-date">January 18, 2025</p>
+        </div>
+      </div>
+      <p class="testimonial-comment">"The experience was fantastic. I will definitely be coming back for more services. Thank you for the excellent support!"</p>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="client-info">
+        <img src="/arun.png" alt="Client 1" class="client-photo">
+        <div class="client-details">
+          <h3>John Doe</h3>
+          <p class="client-date">January 22, 2025</p>
+        </div>
+      </div>
+      <p class="testimonial-comment">"This service was absolutely amazing! It exceeded my expectations, and the team was so professional. Highly recommend!"</p>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="client-info">
+        <img src="/srj.jpeg" alt="Client 2" class="client-photo">
+        <div class="client-details">
+          <h3>Jane Smith</h3>
+          <p class="client-date">January 18, 2025</p>
+        </div>
+      </div>
+      <p class="testimonial-comment">"The experience was fantastic. I will definitely be coming back for more services. Thank you for the excellent support!"</p>
+    </div>
+
+    
+      
+    
+    <!-- Add more testimonial cards as needed -->
+  </div>
+</section>
+
+
+
     <footer>
-        All the copyright @ is reserved by Arun pandey laudari &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Devloped by :
-        <a href="#" style="text-decoration: none;color: #fff;font-weight: bolder;">Arun Pandey
-            Laudari</a>
+      &copy; 2025 Arun Pandey Laudari. All Rights Reserved.
     </footer>
-    <!-- footer end -->
 
+    <script>
+      const style = document.createElement('style');
+      style.innerHTML = `
+      #dynamic-role {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+    `;
+      document.head.appendChild(style);
+
+      const roles = ["AI/ML Enthusiast", "Web Developer", "App Developer", "UI/UX Designer"];
+      let index = 0;
+      setInterval(() => {
+        document.getElementById('dynamic-role').style.opacity = 0;
+        setTimeout(() => {
+          document.getElementById('dynamic-role').textContent = roles[index % roles.length];
+          document.getElementById('dynamic-role').style.opacity = 1;
+          index++;
+        }, 500);
+      }, 2000);
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+
+*{
+    box-sizing: border-box;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 10px;
+    list-style-type: none;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+        .navbar{
+            height: 100px;
+            width: 100%;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+       .navbar .logo{
+              height: 60px;
+              width: 60px;
+              border-radius: 100%;
+              cursor:grab;
+       }
+
+       .navbar .logo img{
+        height: 60px;
+              width: 60px;
+              border-radius: 100%;
+              cursor:grab;
+       }
+
+       .navbar .navlist{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              color: #fff;
+              font-size: x-large;
+              font-weight: 400px;
+       }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src='/arun.png' alt="" >
+        </div>
+        <ul class="navlist">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+
+    </nav>
+    
+</body>
+</html>
