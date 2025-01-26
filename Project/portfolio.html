@@ -397,6 +397,40 @@ grid-template-columns: auto auto auto auto;
         width: 200px;
       }
     }
+
+  /* // contact section css */
+  .contact-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #6b5ce7;
+} 
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-section form {
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea { 
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
   </style>
 </head>
 
@@ -425,7 +459,8 @@ grid-template-columns: auto auto auto auto;
       <p>I craft digital experiences that connect users with meaningful solutions.</p>
       <div class="btn-group">
         <a href="#" class="btn-primary" style="text-decoration: none;">Hire Me</a>
-        <a href="#" class="btn-secondary">View Resume</a>
+        <a href="/Project/Class Notes.pdf" class="btn-secondary" download>View Resume</a>
+
       </div>
     </div>
   </section>
@@ -614,6 +649,23 @@ grid-template-columns: auto auto auto auto;
     <!-- Add more testimonial cards as needed -->
   </div>
 </section>
+
+<!-- Contact me section -->
+<section class="contact-section">
+  <h2>Contact Me</h2>
+  <p>Have a project in mind? Let's collaborate and build something amazing together. Get in touch with me today!</p>
+<!-- making a form of fullname email message -->
+  <form action="mailto:arunpandeylaudari@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</section>
+<!-- 
+contact me section ends here
+ -->
+
+
 
 
 
